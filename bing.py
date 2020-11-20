@@ -15,7 +15,7 @@ date=getmidstring(imgurl.text,'startdate":"','","')
 filename=date+".jpg"
 
 img=requests.get(url)
-open(filename, 'wb').write(img.content)
+open("src/"+filename, 'wb').write(img.content)
 
-os.system("git add "+filename)
+os.system("git add src/"+filename)
 os.system("git commit -m '"+date+"的必应壁纸'")
