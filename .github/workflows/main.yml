@@ -25,7 +25,8 @@ jobs:
           git config --local user.name "Siefe"
       - name: 'Start Python'
         run: python bing.py
-      - name: 'Push changes'
+      - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
+          branch: ${{ github.ref }}
